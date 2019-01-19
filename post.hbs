@@ -38,6 +38,13 @@
 				{{content}}
 			</section>
 
+			<section class="post-subscribe">
+				<div class="ml-form-embed"
+					data-account="1382888:c4v2p8y4b0"
+					data-form="1185450:s0t3t4">
+				</div>
+			</section>
+
 			<section class="post-info">
 
 				<div class="post-share">
@@ -97,19 +104,6 @@
 
 			</section>
 
-
-			<section class="post-comments">
-				<a id="show-disqus" class="post-comments-activate">{{t "Show Comments"}}</a>
-			    <div id="disqus_thread"></div>
-			</section>
-
-            {{#if @labs.subscribers}}
-            <section class="post-subscribe">
-                {{subscribe_form placeholder=(t "Your email address") form_class="post-subscribe-form" input_class="post-subscribe-input" button_class="post-subscribe-button"}}
-                <p>{{t "Get the latest posts delivered right to your inbox."}}</p>
-            </section>
-            {{/if}}
-
 			<aside class="post-nav">
 				{{#next_post}}
 					<a class="post-nav-next" href="{{url}}">
@@ -132,6 +126,10 @@
 				<div class="clear"></div>
 			</aside>
 
+			<section class="post-comments">
+				<a id="show-disqus" class="post-comments-activate">{{t "Show Comments"}}</a>
+				<div id="disqus_thread"></div>
+			</section>
 
 		</div>
 	</article>

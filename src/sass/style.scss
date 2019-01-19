@@ -9,8 +9,35 @@
 @import "highlight";
 
 /* ==========================================================================
+   Custom changes for Mailerlite forms
+	 ========================================================================== */
+.ml-form-embedWrapper {
+	background: transparent !important;
+}
+
+.ml-form-embedContainer,
+.ml-form-embedContainer p {
+  font: 400 'Cardo', serif !important;
+	color: $color-blue-30 !important;
+}
+
+.ml-form-embedContainer h4 {
+	font-family: 'Fira Sans', sans-serif !important;
+	color: $color-black !important;
+}
+
+.ml-form-embedContainer input,
+.ml-form-embedContainer button {
+	font-family: 'Fira Sans', sans-serif !important;
+}
+
+.ml-form-embedWrapper .embedForm {
+	background-color: transparent;
+}
+
+/* ==========================================================================
    Basics
-   ========================================================================== */
+	 ========================================================================== */
 
 @supports (flex-wrap: wrap) {
     body {
@@ -1316,6 +1343,7 @@ img[src$="#full"] {
 	text-align: center;
 	border-bottom: 1px solid $color-gray-90;
 	box-sizing: border-box;
+	background-color: $color-gray-98;
 
 	p {
 		margin: 1.25em 0 0;
