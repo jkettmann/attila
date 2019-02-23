@@ -17,18 +17,26 @@
 
 .ml-form-embedContainer,
 .ml-form-embedContainer p {
-  font: 400 'Cardo', serif !important;
+  font: 400 1em 'Cardo', serif !important;
 	color: $color-blue-30 !important;
+	margin: 0 0 2em !important;
 }
 
 .ml-form-embedContainer h4 {
 	font-family: 'Fira Sans', sans-serif !important;
 	color: $color-black !important;
+	font-size: 1.25em !important;
+	line-height: 1.2em !important;
+	margin: 0 0 1em !important;
 }
 
 .ml-form-embedContainer input,
-.ml-form-embedContainer button {
+#post-subscribe #post-subscribe-content .ml-form-embedContainer button {
 	font-family: 'Fira Sans', sans-serif !important;
+}
+
+#post-subscribe #post-subscribe-content .ml-form-embedContainer button {
+	font-size: 18px;
 }
 
 .ml-form-embedWrapper .embedForm {
