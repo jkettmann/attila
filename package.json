@@ -4,7 +4,8 @@
   "demo": "http://attila.zutrinken.com",
   "version": "1.7.6",
   "engines": {
-    "ghost": ">=2.1.0"
+    "ghost": ">=2.1.0",
+    "ghost-api": "v2"
   },
   "license": "MIT",
   "screenshots": {
@@ -45,6 +46,6 @@
     "load-grunt-tasks": "^3.5.2"
   },
   "config": {
-    "posts_per_page": 10
+    "posts_per_page": 5
   }
 }

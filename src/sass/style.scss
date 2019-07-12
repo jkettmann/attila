@@ -44,6 +44,100 @@
 }
 
 /* ==========================================================================
+   Home
+	 ========================================================================== */
+
+.home-container {
+	display: flex;
+
+	@media only screen and (max-width: 1000px) {
+		flex-direction: column;
+	}
+}
+
+.home-container .home-recent-posts .post:after {
+	width: 90%;
+	left: 5%;
+	margin-left: 0;
+}
+
+.home-recent-posts {
+	margin: 1em;
+	border: 1px solid;
+
+	@media only screen and (min-width: 1000px) {
+		margin-right: 0.5em;
+		border: none;
+	}
+}
+
+.home-recent-posts h2:first-child {
+	text-align: center;
+}
+
+.home-info-column {
+	flex: 1;
+
+	@media only screen and (max-width: 1000px) {
+		margin-top: -1em;
+	}
+}
+
+.home-series,
+.home-newsletter,
+.home-about {
+	margin: 1em;
+	padding: 0 2em 2em;
+	border: 1px solid;
+
+	h2 {
+		text-align: center
+	}
+
+	@media only screen and (min-width: 1000px) {
+		margin-left: 0.5em;
+		border: 1px solid;
+	}
+}
+
+.home-container .home-series .post:after {
+	display: none;
+}
+
+.home-newsletter {
+
+}
+
+.home-about {
+	.post-author {
+		padding: 0;
+    border: none;
+    margin-top: 2em;
+	}
+	.post-author-avatar {
+		margin: 0;
+
+		@media only screen and (max-width: 480px) {
+			margin: auto;
+			float: none;
+			width: 8em;
+			height: 8em;
+		}
+	}
+	.post-author-name {
+		margin-top: 0.5em;
+    font-size: 2em;
+    line-height: 1.5em;
+	}
+	.post-author-about {
+		@media only screen and (max-width: 480px) {
+			margin-top: 1em;
+		}
+	}
+}
+
+
+/* ==========================================================================
    Basics
 	 ========================================================================== */
 
