@@ -5,6 +5,36 @@ jQuery(function($) {
 	var viewport = $(window);
 
 	/* ==========================================================================
+	   Newsletter popup
+		 ========================================================================== */
+
+	var newsletterOpened = false;
+	var hasSpentEnoughTime = false;
+	var ONE_DAY = 24 * 60 * 60 * 1000;
+	setTimeout(function() {
+		hasSpentEnoughTime = true;
+	}, 20000)
+
+	$(document).scroll(function() {
+		var y = $(this).scrollTop();
+		if (!newsletterOpened && hasSpentEnoughTime && y > document.body.clientHeight * 0.3) {
+			newsletterOpened = true;
+
+			var lastClosed = localStorage.getItem('newsletter-popup-closed');
+			var lastClosedBeforeOneDay = !lastClosed || Date.now() - lastClosed > ONE_DAY;
+
+			if (lastClosedBeforeOneDay) {
+				$('.newsletter-popup').fadeIn();
+			}
+		}
+	});
+
+	window._closeNewsletterPopup = function() {
+		localStorage.setItem('newsletter-popup-closed', Date.now());
+		$('.newsletter-popup').fadeOut();
+	}
+
+	/* ==========================================================================
 	   Menu
 	   ========================================================================== */
 

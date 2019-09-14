@@ -16,18 +16,27 @@
 }
 
 .ml-form-embedContainer,
-.ml-form-embedContainer p {
+.ml-form-embedContainer p,
+.ml-form-successContent,
+.ml-form-successContent p {
   font: 400 1em 'Cardo', serif !important;
 	color: $color-blue-30 !important;
 	margin: 0 0 2em !important;
+	text-align: left !important;
+	font-size: 18px !important;
+	line-height: 30px !important;
 }
 
-.ml-form-embedContainer h4 {
+.ml-form-embedContainer h4,
+.ml-form-successContent h4 {
 	font-family: 'Fira Sans', sans-serif !important;
 	color: $color-black !important;
-	font-size: 1.25em !important;
+	font-size: 1.5em !important;
 	line-height: 1.2em !important;
-	margin: 0 0 1em !important;
+	margin: 0 0 10px !important;
+	font-weight: 600 !important;
+	text-rendering: optimizeLegibility;
+	text-align: left !important;
 }
 
 .ml-form-embedContainer input,
@@ -41,6 +50,70 @@
 
 .ml-form-embedWrapper .embedForm {
 	background-color: transparent;
+}
+
+.newsletter-popup {
+	display: none;
+	position: fixed;
+	bottom: 0;
+	right: calc((100% - 720px) / 2 - 500px);
+	width: 450px;
+	padding: 30px 10px 10px;
+	border: 1px solid #ccc;
+	border-bottom: none;
+	background: #faf9f7;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	z-index: 199;
+}
+
+@media only screen and (max-width : 1750px) {
+	.newsletter-popup {
+		display: none !important;
+	}
+}
+
+.newsletter-popup .headline {
+	margin: 0 20px 12px;
+}
+
+.newsletter-popup .subline {
+	margin: 0 20px;
+	font-size: 0.9em;
+}
+
+.newsletter-popup .ml-form-embedContainer,
+.newsletter-popup .ml-form-embedContainer p {
+	margin: 0 !important;
+}
+
+.newsletter-popup-close-button {
+	background: none;
+	border: none;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0;
+}
+
+.newsletter-popup-close-button:before,
+.newsletter-popup-close-button:after {
+	content: " ";
+	background: #777;
+	left: 10px;
+	right: 10px;
+	height: 1px;
+	position: absolute;
+}
+
+.newsletter-popup-close-button:before {
+	transform: rotate(-45deg);
+}
+
+.newsletter-popup-close-button:after {
+	transform: rotate(45deg);
 }
 
 /* ==========================================================================
@@ -1459,7 +1532,7 @@ img[src$="#full"] {
 
 .post-subscribe {
 	position: relative;
-	padding: 2em 0;
+	padding-top: 16px;
 	text-align: center;
 	border-bottom: 1px solid $color-gray-90;
 	box-sizing: border-box;
