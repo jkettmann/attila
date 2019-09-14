@@ -32,6 +32,18 @@
 			</div>
 
 			<div class="home-info-column">
+				<div class="home-newsletter">
+					<h2>Subscribe</h2>
+
+					<section id="post-subscribe">
+						<p>I regularly post new articles related to GraphQL and React. Drop your email in the box below and you'll receive updates right in your inbox.</p>
+
+						<div class="ml-form-embed"
+							data-account="1382888:c4v2p8y4b0"
+							data-form="1399872:i0s7r4">
+						</div>
+				</div>
+
 				<div class="home-series">
 					<h2>Series of articles</h2>
 
@@ -56,18 +68,8 @@
 					{{/get}}
 				</div>
 
-				<div class="home-newsletter">
-					<h2>Subscribe</h2>
-
-					<section id="post-subscribe">
-						<div id="post-subscribe-content" class="ml-form-embed" data-account="1382888:c4v2p8y4b0"
-							data-form="1185450:s0t3t4">
-						</div>
-					</section>
-				</div>
-
 				<div class="home-about">
-					{{#get "authors" filter="slug:jkettmann"}}
+					{{#get "authors" filter="slug:johannes"}}
 					{{#foreach authors}}
 					<aside class="post-author">
 						<figure class="post-author-avatar avatar">
@@ -96,5 +98,4 @@
 		</div>
 
 	</main>
-
 </div>

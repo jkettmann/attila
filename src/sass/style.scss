@@ -61,6 +61,10 @@
 	margin-left: 0;
 }
 
+.home-container .home-recent-posts .pagination:after {
+	display: none;
+}
+
 .home-recent-posts {
 	margin: 1em;
 	border: 1px solid;
@@ -147,6 +151,17 @@
 		@media only screen and (max-width: 480px) {
 			margin-top: 1em;
 		}
+	}
+	.post-author-bio {
+		font-size: 1em;
+		font-family: 'Cardo', serif;
+		line-height: 1.5em;
+	}
+	.post-author-bio span {
+		font-size: 1em;
+	}
+	.post-author-twitter {
+		font-family: 'Fira Sans', sans-serif;
 	}
 }
 
@@ -996,26 +1011,15 @@ img[src$="#full"] {
 	font-family: 'Fira Sans', sans-serif;
 	line-height: 1em;
 	padding-bottom: 6em;
+	border-top: 1px solid;
+	padding: 1em 0;
 }
-.credits {
-	text-align: center;
-	font-size: 0.625em;
-	line-height: 1em;
-	padding: 1.1em 0;
-	overflow: auto;
-	opacity: 0.5;
+#footer section {
+	display: flex;
+	justify-content: space-between;
 }
-.credits a {
-	color: inherit;
-}
-.credits span {
-	display: block;
-}
-.credits-theme {
-	float: left;
-}
-.credits-software {
-	float: right;
+.footer-copyright {
+	font-size: 0.7em;
 }
 
 /* ==========================================================================

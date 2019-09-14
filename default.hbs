@@ -25,9 +25,20 @@
 
 		<footer id="footer">
 			<div class="inner">
-				<section class="credits">
-					<span class="credits-theme">{{t "Theme" }} <a href="https://github.com/zutrinken/attila">Attila</a> {{t "by"}} <a href="https://zutrinken.com" rel="nofollow">zutrinken</a></span>
-					<span class="credits-software">{{t "Published with"}} <a href="https://ghost.org">Ghost</a></span>
+				<section>
+					<div class="footer-copyright">
+						© Johannes Kettmann
+					</div>
+
+					<div class="footer-social">
+					{{#if @blog.twitter}}
+					<a href="{{twitter_url}}" title="{{@blog.twitter}}"><i class="ic ic-twitter"></i></a>
+					{{/if}}
+					</div>
+
+					<div class="footer-legal">
+						<a href="/legal" title="Legal">Legal</a>
+					</div>
 				</section>
 			</div>
 		</footer>
