@@ -13,12 +13,15 @@ jQuery(function($) {
 	var ONE_DAY = 24 * 60 * 60 * 1000;
 	setTimeout(function() {
 		hasSpentEnoughTime = true;
-	}, 20000)
+	}, window.location.host.indexOf('localhost') === 0 ? 0 :20000);
 
 	$(document).scroll(function() {
 		var y = $(this).scrollTop();
 		if (!newsletterOpened && hasSpentEnoughTime && y > document.body.clientHeight * 0.3) {
 			newsletterOpened = true;
+
+			var hasAlreadySubscribed = localStorage.getItem('newsletter-subscribed');
+			if (hasAlreadySubscribed) return;
 
 			var lastClosed = localStorage.getItem('newsletter-popup-closed');
 			var lastClosedBeforeOneDay = !lastClosed || Date.now() - lastClosed > ONE_DAY;
@@ -32,6 +35,31 @@ jQuery(function($) {
 	window._closeNewsletterPopup = function() {
 		localStorage.setItem('newsletter-popup-closed', Date.now());
 		$('.newsletter-popup').fadeOut();
+	}
+
+	if (window.MutationObserver) {
+		var observer = new MutationObserver(function(mutations) {
+			mutations.forEach(function(mutation) {
+				if (!mutation.addedNodes) return;
+
+				for (var i = 0; i < mutation.addedNodes.length; i++) {
+					var node = mutation.addedNodes[i];
+					var button = node.querySelector && node.querySelector('.ml-form-embedSubmit button.primary');
+					if (button) {
+						button.addEventListener('click', function() {
+							localStorage.setItem('newsletter-subscribed', Date.now());
+						});
+					}
+				}
+			});
+		})
+
+		observer.observe(document.body, {
+				childList: true
+			, subtree: true
+			, attributes: false
+			, characterData: false
+		});
 	}
 
 	/* ==========================================================================

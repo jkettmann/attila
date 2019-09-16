@@ -56,35 +56,109 @@
 	display: none;
 	position: fixed;
 	bottom: 0;
-	right: calc((100% - 720px) / 2 - 500px);
-	width: 450px;
-	padding: 30px 10px 10px;
-	border: 1px solid #ccc;
-	border-bottom: none;
 	background: #faf9f7;
-	border-top-left-radius: 4px;
-	border-top-right-radius: 4px;
 	z-index: 199;
-}
-
-@media only screen and (max-width : 1750px) {
-	.newsletter-popup {
-		display: none !important;
-	}
-}
-
-.newsletter-popup .headline {
-	margin: 0 20px 12px;
-}
-
-.newsletter-popup .subline {
-	margin: 0 20px;
-	font-size: 0.9em;
 }
 
 .newsletter-popup .ml-form-embedContainer,
 .newsletter-popup .ml-form-embedContainer p {
 	margin: 0 !important;
+}
+
+@media only screen and (max-width : 1449px) {
+	.newsletter-popup {
+		left: 0;
+		right: 0;
+		padding: 0;
+		border-top: 1px solid #ccc;
+	}
+
+	.newsletter-popup .ml-form-embedContainer {
+    max-width: 720px;
+    margin: 0 auto !important;
+	}
+
+	.newsletter-popup .ml-form-embedContent,
+	.newsletter-popup .ml-form-embedContent h4 {
+		margin-bottom: 4px !important;
+	}
+
+	.newsletter-popup .ml-form-embedContent p {
+		display: block !important;
+	}
+
+	.newsletter-popup .ml-block-form {
+		display: flex !important;
+	}
+
+	.newsletter-popup .ml-form-formContent {
+		display: flex !important;
+		flex: 2;
+		margin: 0 !important;
+	}
+
+	.newsletter-popup .ml-form-fieldRow {
+		margin-right: 16px !important;
+	}
+
+	.newsletter-popup .ml-form-embedSubmit {
+		flex: 1;
+		margin: 0 !important;
+	}
+
+	.newsletter-popup .ml-form-successContent {
+    margin-bottom: 16px !important;
+	}
+}
+
+@media only screen and (max-width : 600px) {
+	.newsletter-popup .ml-form-embedContent h4 {
+		margin-bottom: 12px !important;
+	}
+
+	.newsletter-popup .ml-form-embedContent p {
+		display: none !important;
+	}
+}
+
+@media only screen and (max-width : 450px) {
+	.newsletter-popup {
+		display: none !important;
+	}
+}
+
+@media only screen and (min-width : 1450px) {
+	.newsletter-popup {
+		width: 350px;
+		right: calc(((100% - 720px) / 2) - 24%);
+		padding: 30px 10px 10px;
+		border: 1px solid #ccc;
+		border-bottom: none;
+		background: #faf9f7;
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+	}
+}
+
+@media only screen and (min-width : 1550px) {
+	.newsletter-popup {
+		width: 400px;
+		right: calc(((100% - 720px) / 2) - 26%);
+	}
+}
+
+@media only screen and (min-width : 1750px) {
+	.newsletter-popup {
+		width: 450px;
+		right: calc(((100% - 720px) / 2) - 500px);
+	}
+}
+
+@media only screen and (min-width : 1900px) {
+	.newsletter-popup {
+		width: 500px;
+		right: calc((100% - 720px) / 2 - 550px);
+	}
 }
 
 .newsletter-popup-close-button {
